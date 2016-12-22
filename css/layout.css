@@ -326,12 +326,12 @@ ul#nav li.current a { color: #F06000; }
 }
 
 .python {
-  	width: 70%;
+  	width: 60%;
   	-moz-animation: photoshop 2s ease;
   	-webkit-animation: photoshop 2s ease;
 }
-.django {
-  	width: 80%;
+.ruby {
+  	width: 60%;
   	-moz-animation: illustrator 2s ease;
   	-webkit-animation: illustrator 2s ease;
 }
@@ -346,17 +346,17 @@ ul#nav li.current a { color: #F06000; }
   	-webkit-animation: css 2s ease;
 }
 .java {
-  	width: 70%;
+  	width: 80%;
   	-moz-animation: html5 2s ease;
   	-webkit-animation: html5 2s ease;
 }
-.bootstrap {
-  	width: 40%;
+.android {
+  	width: 30%;
   	-moz-animation: jquery 2s ease;
   	-webkit-animation: jquery 2s ease;
 }
-.angularjs {
-  	width: 40%;
+.ror {
+  	width: 30%;
   	-moz-animation: jquery 2s ease;
   	-webkit-animation: jquery 2s ease;
 }
