@@ -326,7 +326,7 @@ ul#nav li.current a { color: #F06000; }
 }
 
 .python {
-  	width: 60%;
+  	width: 80%;
   	-moz-animation: photoshop 2s ease;
   	-webkit-animation: photoshop 2s ease;
 }
@@ -336,7 +336,12 @@ ul#nav li.current a { color: #F06000; }
   	-webkit-animation: illustrator 2s ease;
 }
 .html-css-js {
-  	width: 50%;
+  	width: 70%;
+  	-moz-animation: wordpress 2s ease;
+  	-webkit-animation: wordpress 2s ease;
+}
+.xml {
+  	width: 70%;
   	-moz-animation: wordpress 2s ease;
   	-webkit-animation: wordpress 2s ease;
 }
@@ -351,7 +356,7 @@ ul#nav li.current a { color: #F06000; }
   	-webkit-animation: html5 2s ease;
 }
 .android {
-  	width: 30%;
+  	width: 50%;
   	-moz-animation: jquery 2s ease;
   	-webkit-animation: jquery 2s ease;
 }
