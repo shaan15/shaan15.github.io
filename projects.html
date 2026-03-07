@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NXCVJCR');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="images/headerimage.jpeg" type="image/x-icon">
+<title>Shaan Chopra – Selected Research Projects</title>
+
+<!-- Normalize -->
+
+<link rel="stylesheet" href="css/assets/normalize.css" type="text/css">
+
+<!-- Bootstrap -->
+
+<link href="css/assets/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+<!-- Font-awesome.min -->
+
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Effet -->
+
+<link rel="stylesheet" href="css/gallery/foundation.min.css"  type="text/css">
+<link rel="stylesheet" type="text/css" href="css/gallery/set1.css" />
+
+<!-- Main Style -->
+
+<link rel="stylesheet" href="css/main.css" type="text/css">
+
+<!-- Responsive Style -->
+
+<link href="css/responsive.css" rel="stylesheet" type="text/css">
+
+<style>
+  /* ── Page shell ── */
+  .projects-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 28px 100px;
+  }
+
+  /* ── Intro blurb ── */
+  .projects-intro {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.75;
+    text-align: justify;
+    margin-bottom: 52px;
+  }
+
+  /* ── Theme block ── */
+  .theme-block {
+    margin-bottom: 64px;
+  }
+
+  .theme-heading {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #222;
+    border-bottom: 2px solid #B26CCC;
+    padding-bottom: 6px;
+    margin-bottom: 32px;
+    margin-top: 0;
+  }
+
+  /* ── Individual project card ── */
+  .project-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+    margin-bottom: 36px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid #ececec;
+  }
+
+  .project-card:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  /* Image */
+  .project-image {
+    flex: 0 0 240px;
+    width: 240px;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  }
+
+  /* No-image placeholder */
+  .project-image.no-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-image.no-img .img-placeholder {
+    width: 100%;
+    height: 180px;
+    background: #f3edf8;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-image.no-img .img-placeholder i {
+    font-size: 36px;
+    color: #B26CCC;
+    opacity: 0.5;
+  }
+
+  /* Text */
+  .project-body {
+    flex: 1;
+  }
+
+  .project-body h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #222;
+    margin-top: 0;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+
+  .project-body p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.75;
+    text-align: justify;
+    margin-bottom: 10px;
+  }
+
+  .project-links {
+    margin-top: 6px;
+  }
+
+  .project-links a {
+    color: #B26CCC;
+    font-weight: 600;
+    font-size: 13px;
+    margin-right: 16px;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+    white-space: nowrap;
+  }
+
+  .project-links a:hover {
+    border-bottom-color: #B26CCC;
+  }
+
+  /* ── Subtheme heading (indented, lighter weight) ── */
+  .subtheme-heading {
+    font-size: 15px;
+    font-weight: 700;
+    color: #555;
+    letter-spacing: 0.3px;
+    margin-top: 36px;
+    margin-bottom: 24px;
+    padding-left: 14px;
+    border-left: 3px solid #d4a8e8;
+  }
+
+  .subtheme-block {
+    margin-bottom: 12px;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .project-card {
+      flex-direction: column;
+      gap: 16px;
+    }
+    .project-image,
+    .project-image.no-img {
+      flex: none;
+      width: 100%;
+    }
+    .project-image img,
+    .project-image.no-img .img-placeholder {
+      height: 180px;
+    }
+  }
+</style>
+
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="js/assets/modernizr-2.8.3.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXCVJCR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- header -->
+
+<header id="about" class="header">
+  <div class="container-fluid">
+    <hgroup>
+      
+      <!-- logo -->
+      
+      <!-- <h1> <a title="Shaan Chopra"><img src="images/logo.png" alt="S" title="S"/></a> </h1> -->
+      <nav id="nav-wrap">
+
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+        <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+         <ul id="nav" class="nav">
+            <li><a class="smoothscroll" href="index.html" style="background-color: #EBEBEB">About</a></li>
+            <!-- <li><a class="smoothscroll" href="#projects" style="background-color: #EBEBEB">Projects</a></li> -->
+           <li><a class="smoothscroll" href="publications.html" style="background-color: #EBEBEB">Publications</a></li>
+           <li><a class="smoothscroll" href="pdfs/cv.pdf" style="background-color: #EBEBEB">CV</a></li>
+           <li><a class="smoothscroll" href="projects.html" style="background-color: #EBEBEB">Selected Research</a></li>
+           <!-- <li><a class="smoothscroll" href="#artwork" style="background-color: #EBEBEB">Artwork</a></li> -->
+           
+         </ul> <!-- end #nav -->
+
+      </nav>
+
+      
+      <!-- logo --> 
+      
+    </hgroup>
+  </div>
+</header>
+
+<!-- header -->
+
+<!-- ── Main ── -->
+<main class="main-wrapper" id="container">
+
+  <div class="projects-wrapper">
+
+    <br>
+    <h1><center>Research</center></h1>
+    <br>
+
+    <!-- Intro -->
+    <p class="projects-intro">I have investigated the design of health tools and health data use from three perspectives: (i) human-centered AI for and personal data use in planning, tracking, reflecting, and acting around personal health; (ii) integration of patient-generated data for clinical care and collaboration; and (iii) inclusive and community-centered design for sensitive health and wellbeing contexts.</p>
+
+
+    <!-- ══════════════════════════════════════════
+         THEME 1 — Human-Centered AI & Personal Data
+    ══════════════════════════════════════════════ -->
+    <div class="theme-block">
+      <h3 class="theme-heading">Human-Centered AI and Personal Data Use for Health</h3>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="images/projects/genai.png" alt="Generative AI for Personal Health Data" />
+        </div>
+        <div class="project-body">
+          <h4>Generative AI for Planning, Tracking, Reflecting, and Acting around Personal Health Data</h4>
+          <p>With recent generative AI (GAI) advancements, researchers have identified opportunities for and demonstrated the potential of GAI-based health agents to support reflection, motivate behavior change, and personalize recommendations for actions. Complementing such fine-tuned tools, I investigated the potential for GAI to support people in navigating complexities introduced by heterogeneous tracking data, goals, expertise, and context throughout the multiple stages of personal health informatics. Opportunities and considerations I identified — e.g., for deeper AI integration with personal data libraries, for helping people craft effective prompts toward self-tracking support, for translating query sessions into effective action — are an important prerequisite for development and longitudinal examination of GAI tools that support individuals across or within specific stages of planning, tracking, reflecting, and acting on personal health data, and help establish my long-term agenda in human-centered AI for personal health.</p>
+          <div class="project-links">
+            <a href="pdfs/imwut2025gai.pdf">IMWUT 2025</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="images/projects/neural.png" alt="Bayesian Analysis of Self-Tracked Health Data" />
+        </div>
+        <div class="project-body">
+          <h4>Bayesian Analysis of Self-Tracked Health Data</h4>
+          <p>People self-track for health, often to answer questions using their data. However, heterogeneity in tracking goals, data, and questions makes it challenging to support effective integration and reflection. Extending theoretical considerations around Bayesian modeling of trigger and symptom relationships in self-tracked health data, we empirically investigated self-tracker experiences using Bayesian analysis to examine their real-world data around a range of questions. We interviewed and observed 8 participants reflect on self-tracked data using a technology probe that applied Bayesian analysis, and identified considerations for designing Bayesian analysis to support exploration and reflection on relationships across a range of health goals, data, and questions. <em>This work is currently under review.</em></p>
+        </div>
+      </div>
+
+    </div><!-- /theme 1 -->
+
+
+    <!-- ══════════════════════════════════════════
+         THEME 2 — Patient-Generated Data for Clinical Care
+    ══════════════════════════════════════════════ -->
+    <div class="theme-block">
+      <h3 class="theme-heading">Integration of Patient-Generated Data for Clinical Care and Collaboration</h3>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="images/projects/clh.png" alt="COVID Long Haul Cohort Study" />
+        </div>
+        <div class="project-body">
+          <h4>Cohort Study of Long-COVID Patients &amp; Data Needs to Support Clinical Decisions</h4>
+          <p>Covid long haul (CLH) is an emerging chronic illness with drastically differing experiences that necessitate personalized care. Because patients interact with different clinicians during diagnosis of and ongoing medical treatment for CLH symptoms, ensuring interoperability and clinical relevance of different data is key to supporting personalized care recommendations. Collaborating with the Parkview Post-COVID Clinic, I conducted clinically-embedded and longitudinal research to develop a holistic understanding of CLH using multimodal patient-generated data (wearable tracking data, weekly surveys, EHR, patient interviews) and to inform designs supporting clinical care workflows — including clinical dashboards and holistic patient profiles integrating patient-reported and self-tracked data. My designs remain a part of and continue to have a sustained impact in Parkview's health ecosystem.</p>
+          <div class="project-links">
+            <a href="pdfs/cscw2024_parkview.pdf">CSCW 2024</a>
+            <a href="https://dl.acm.org/doi/pdf/10.1145/3613904.3642827">CHI 2024</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image no-img">
+          <div class="img-placeholder"><i class="fa fa-heartbeat"></i></div>
+        </div>
+        <div class="project-body">
+          <h4>Implementing Goal-Directed Self-Tracking for Migraine Management</h4>
+          <p>Self-tracking and personal informatics offer important potential in chronic condition management, but such potential is often undermined by difficulty in aligning self-tracking tools to an individual's goals. I contributed to research on goal-directed self-tracking of migraine, conducting a longitudinal examination of patient-clinician collaboration to set up, evolve, and align self-tracking plans with patient migraine management goals through a 12+ month deployment study.</p>
+          <div class="project-links">
+            <a href="https://doi.org/10.1145/3613904.3642075">CHI 2024 Best Paper</a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /theme 2 -->
+
+
+    <!-- ══════════════════════════════════════════
+         THEME 3 — Inclusive & Community-Centered Design
+    ══════════════════════════════════════════════ -->
+    <div class="theme-block">
+      <h3 class="theme-heading">Inclusive and Community-Centered Design for Sensitive Health and Wellbeing Contexts</h3>
+
+      <!-- Subtheme 3a -->
+      <div class="subtheme-block">
+        <h4 class="subtheme-heading">Self-Tracking and Sense-Making for Gendered Health and Socially-Informed Bodily Experiences</h4>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/projects/uterus.jpg" alt="Menopause Experience Design" />
+          </div>
+          <div class="project-body">
+            <h4>Designing to Record and Share Experiences of Menopause Across Generations</h4>
+            <p>Menopause is often overlooked or medicalized, devaluing individual experiences and failing to support individuals experiencing this life event. Family dynamics, death, and taboo mean that individuals often miss out on information that could help them contextualize their experiences. We conducted <b>interviews</b> and <b>co-design sessions</b> with people who have experienced or are currently experiencing menopause to investigate social and familial aspects of menopause and design in support of intergenerational sharing of menopause experiences.</p>
+            <div class="project-links">
+              <a href="pdfs/cscw2024_menopause.pdf">CSCW 2024</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/projects/pcos.jpg" alt="PCOS Tracking & Management" />
+          </div>
+          <div class="project-body">
+            <h4>Designing for Tracking &amp; Managing PCOS</h4>
+            <p>Polycystic Ovary Syndrome (PCOS) is a condition that causes hormonal imbalance and infertility in women and people with female reproductive organs. PCOS causes different symptoms for different people, with no singular or universal cure. Being a stigmatized and enigmatic condition, it is challenging to discover, diagnose, and manage PCOS. Our work aims to inform the design of inclusive health technologies through an understanding of people's lived experiences and challenges with PCOS. We conducted <b>interviews</b> with people diagnosed with PCOS and <b>qualitatively analyzed</b> a PCOS-specific subreddit forum. We reported people's support-seeking, sense-making, and self-experimentation practices, and found uncertainty and stigma to be key in shaping their experiences. We identified avenues for designing technology to support diverse needs such as personalized and contextual tracking, accelerated self-discovery, and co-management.</p>
+            <div class="project-links">
+              <a href="pdfs/chi2021_pcos.pdf">CHI 2021</a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /subtheme 3a -->
+
+      <!-- Subtheme 3b -->
+      <div class="subtheme-block">
+        <h4 class="subtheme-heading">Designing Digital and AI-Enabled Health Tools with Communities</h4>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/projects/ethicalai.png" alt="Community-Informed mHealth Equity" />
+          </div>
+          <div class="project-body">
+            <h4>Community-Informed Considerations for Advancing Equity in AI-Enabled Mobile Health Tools</h4>
+            <p>Hispanic and Latino communities in the U.S. bear a disproportionate burden of chronic conditions (e.g., asthma), with access barriers and structural injustices having historically excluded them from medical research and health technology design. Our team developed a case scenario storyboard depicting use of AI-enabled health tools for pediatric asthma and conducted focus groups to uncover community perspectives on preferences, benefits, barriers, and concerns. Participants discussed usability, individualized support, affordability, prediction accuracy, overreliance, data sharing, and privacy. I further translated project-specific insights into a translational resource for supporting designers in engaging communities to create inclusive and culturally-responsive health technologies — contributing methodological guidance for community-based, human-centered approaches to health technology design and evaluation.</p>
+            <div class="project-links">
+              <a href="pdfs/jmir_2025.pdf">JMIR 2025</a>
+              <a href="pdfs/cscw2024_mhealth.pdf">CSCW 2024 Poster</a>
+              <a href="pdfs/chi2024_mhealth.pdf">CHI 2024 Workshop Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/projects/hr.jpg" alt="Human Rights-Based Design for Dementia" />
+          </div>
+          <div class="project-body">
+            <h4>A Human Rights-Based Approach for Designing for & with People with Dementia</h4>
+            <p>User-centered design is typically framed around meeting the preferences and needs of populations involved in the design process. However, when designing technology for people with disabilities — in particular dementia — there is also a moral imperative to ensure their human rights are consciously integrated into the process and included in the product. Our work introduced a human rights-based <b>user-centered design</b> process informed by the United Nations Convention on the Rights of Persons with Disabilities (CRPD). We conducted design workshops with undergraduate students and dementia advocates to design technology for people with dementia, actively involving people with dementia throughout the design process.</p>
+            <div class="project-links">
+              <a href="pdfs/chi2021_dementia.pdf">CHI 2021 Case Study</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/projects/menstrual.jpg" alt="Menstrual Immobilities" />
+          </div>
+          <div class="project-body">
+            <h4>Gendered Experience of Accessing Safe Spaces for Menstruation in India</h4>
+            <p>Daily management of menstrual hygiene becomes challenging in cultural contexts where menstruation is stigmatized. Our research identifies and examines such challenges faced during menstruation in the urban environs of Delhi, India. We used <b>participatory design activities</b>, <b>interviews</b>, and a <b>survey</b> to investigate how participants deal with their periods on the go, and examined participants' conceptualizations of "safe spaces" where they could deal with their period on their own terms. We discuss how menstrual mobilities are being or can be supported through technology-based interventions.</p>
+            <div class="project-links">
+              <a href="pdfs/chi2020_menstrualimmobilities.pdf">CHI 2020</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/projects/mhe.jpg" alt="Menstrual Health Education" />
+          </div>
+          <div class="project-body">
+            <h4>Examining Platforms for Menstrual Health Education in India</h4>
+            <p>Menstruation is a conversational taboo in India, restricting the effective delivery of Menstrual Health Education. Menstrupedia, a digital platform designed for an Indian audience, aims to bridge this information gap via its website and comic. We use <b>qualitative research methods</b> and engage with a Feminist HCI lens to analyze Menstrupedia's affordances and shortcomings, and provide recommendations for designing culturally-responsive technology for educating about sensitive health topics such as menstruation.</p>
+            <div class="project-links">
+              <a href="pdfs/cscw2018_menstrupedia.pdf">CSCW 2018</a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /subtheme 3b -->
+
+    </div><!-- /theme 3 -->
+
+  </div><!-- /projects-wrapper -->
+</main>
+
+<!-- ── Footer ── -->
+<footer style="background-color:#222222; z-index:1; width:100%; padding-top:10px; padding-bottom:10px; bottom:0; left:0; right:0; text-align:center; color:#999999; font-size:10px; letter-spacing:1px; font-weight:400">
+  <div style="padding-top:px">
+    <div class="row" style="padding-top:20px"></div>
+  </div>
+</footer>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/assets/jquery.min.js"><\/script>')</script>
+<script src="js/assets/plugins.js" type="text/javascript"></script>
+<script src="js/assets/bootstrap.min.js" type="text/javascript"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script src="js/maps.js" type="text/javascript"></script>
+<script src="js/custom.js" type="text/javascript"></script>
+<script src="js/jquery.contact.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+<script src="js/gallery/masonry.pkgd.min.js" type="text/javascript"></script>
+<script src="js/gallery/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+<script src="js/gallery/jquery.infinitescroll.min.js" type="text/javascript"></script>
+<script src="js/gallery/main.js" type="text/javascript"></script>
+</body>
+</html>
