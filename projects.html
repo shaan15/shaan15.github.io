@@ -53,6 +53,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     color: #444;
     line-height: 1.75;
     text-align: justify;
+    margin-bottom: 16px;
+  }
+
+  .projects-intro:last-of-type {
     margin-bottom: 52px;
   }
 
@@ -273,6 +277,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Intro -->
     <p class="projects-intro">My research investigates health technology design and personal data use from three perspectives: (i) <a href="#theme-1">human-centered AI for and personal data use in planning, tracking, reflecting, and acting around personal health</a>; (ii) <a href="#theme-2">integration of patient-generated data for clinical care and collaboration</a>; and (iii) <a href="#theme-3">inclusive and community-centered design for sensitive health and wellbeing contexts</a>. I have examined a range of health and wellbeing contexts (e.g., gendered health, chronic health management, AI for personal and community health), including those marked by uncertainty, stigma, and structural inequities.</p>
 
+    <!-- <p class="projects-intro">My current research and long-term agenda focuses on advancing human-centered AI for health by combining large-scale health data with design- and community-based approaches to inform inclusive and clinically relevant digital and AI-enabled health tools.</p> -->
+
 
     <!-- ══════════════════════════════════════════
          THEME 1 — Human-Centered AI & Personal Data
@@ -285,8 +291,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <img src="images/projects/genai.png" alt="Generative AI for Personal Health Data" />
         </div>
         <div class="project-body">
-          <h4>Generative AI for Planning, Tracking, Reflecting, and Acting around Personal Health Data</h4>
-          <p>With recent generative AI (GAI) advancements, researchers have identified opportunities for and demonstrated the potential of GAI-based health agents to support reflection, motivate behavior change, and personalize recommendations for actions. Complementing such fine-tuned tools, I investigated the potential for GAI to support people in navigating complexities introduced by heterogeneous tracking data, goals, expertise, and context throughout the multiple stages of personal health informatics. Opportunities and considerations I identified — e.g., for deeper AI integration with personal data libraries, for helping people craft effective prompts toward self-tracking support, for translating query sessions into effective action — are an important prerequisite for development and longitudinal examination of GAI tools that support individuals across or within specific stages of planning, tracking, reflecting, and acting on personal health data, and help establish my long-term agenda in human-centered AI for personal health.</p>
+          <h4>Generative AI for Operationalizing Health Goals to Support Planning, Tracking, Reflecting, and Acting around Personal Health Data </h4>
+          <p>Generative AI (GAI)-based health agents demonstrate potential to support reflection, motivate behavior change, and provide personalized recommendations. Complementing existing fine-tuned tools and building on GAI explorations within individual stages of self-tracking, I investigated the potential for GAI to support people in navigating complexities introduced by heterogeneous tracking data, goals, expertise, and context throughout the multiple stages of personal health informatics. Opportunities and considerations identified through this deep exploration (e.g., for deeper AI integration with personal data libraries, for helping people craft effective prompts toward self-tracking support, for translating query sessions into effective action) are an important prerequisite for development and longitudinal examination of GAI tools that support individuals across or within specific stages of planning, tracking, reflecting, and acting on their personal health data and for establishing my long-term agenda in human-centered AI for personal health.</p>
+
+          <p>Building on my preliminary findings, I am developing LLM-enabled self-tracking support for health, specifically for (i) defining hypotheses based on individual health goals and contexts and (ii) translating those to configure actionable self-tracking plans for data collection. Our tool aims to support the range of and variability in goals and contexts individuals bring to their personal health data.
+</p>
           <div class="project-links">
             <a href="pdfs/imwut2025gai.pdf">IMWUT 2025</a>
           </div>
@@ -295,7 +304,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="project-card">
         <div class="project-image">
-          <img src="images/projects/neural.png" alt="Bayesian Analysis of Self-Tracked Health Data" />
+          <img src="images/projects/bayes.png" alt="Bayesian Analysis of Self-Tracked Health Data" />
         </div>
         <div class="project-body">
           <h4>Bayesian Analysis of Self-Tracked Health Data</h4>
@@ -327,8 +336,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div class="project-card">
-        <div class="project-image no-img">
-          <div class="img-placeholder"><i class="fa fa-heartbeat"></i></div>
+        <div class="project-image">
+          <img src="images/projects/migraine.png" alt="Migraine Self-Tracking" />
         </div>
         <div class="project-body">
           <h4>Implementing Goal-Directed Self-Tracking for Migraine Management</h4>
@@ -405,7 +414,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="project-body">
             <h4>A Human Rights-Based Approach for Designing for & with People with Dementia</h4>
-            <p>User-centered design is typically framed around meeting the preferences and needs of populations involved in the design process. However, when designing technology for people with disabilities — in particular dementia — there is also a moral imperative to ensure their human rights are consciously integrated into the process and included in the product. Our work introduced a human rights-based <b>user-centered design</b> process informed by the United Nations Convention on the Rights of Persons with Disabilities (CRPD). We conducted design workshops with undergraduate students and dementia advocates to design technology for people with dementia, actively involving people with dementia throughout the design process.</p>
+            <p>User-centered design is typically framed around meeting the preferences and needs of populations involved in the design process. However, when designing technology for people with disabilities — in particular dementia — there is also a moral imperative to ensure their human rights are consciously integrated into the process and included in the product. Our work introduced a human rights-based user-centered design process informed by the United Nations Convention on the Rights of Persons with Disabilities (CRPD). We conducted design workshops with undergraduate students and dementia advocates to design technology for people with dementia, actively involving people with dementia throughout the design process.</p>
             <div class="project-links">
               <a href="pdfs/chi2021_dementia.pdf">CHI 2021 Case Study</a>
             </div>
@@ -414,25 +423,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="project-card">
           <div class="project-image">
-            <img src="images/projects/menstrual.jpg" alt="Menstrual Immobilities" />
+            <img src="images/projects/menstrual.jpg" alt="Menstrual Health in India" />
           </div>
           <div class="project-body">
-            <h4>Gendered Experience of Accessing Safe Spaces for Menstruation in India</h4>
-            <p>Daily management of menstrual hygiene becomes challenging in cultural contexts where menstruation is stigmatized. Our research identifies and examines such challenges faced during menstruation in the urban environs of Delhi, India. We used <b>participatory design activities</b>, <b>interviews</b>, and a <b>survey</b> to investigate how participants deal with their periods on the go, and examined participants' conceptualizations of "safe spaces" where they could deal with their period on their own terms. We discuss how menstrual mobilities are being or can be supported through technology-based interventions.</p>
+            <h4>Culturally-Responsive Technology Design for Menstrual Health Management and Education in the Indian Context</h4>
+            <p>Menstruation remains stigmatized in many parts of India, shaping how people access information and manage their periods in everyday life. I contributed to research examining how sociocultural norms influence both menstrual health education and the lived experience of menstruation in public and private spaces. Using qualitative approaches and design-based exploration, we investigated how people manage their periods on the go and conceptualize and access "safe spaces" for menstrual management. In other work, we also used a Feminist HCI lens to analyze a digital menstrual health education platform designed for Indian audiences, identifying its affordances and limitations for addressing menstrual stigma and delivering culturally-responsive menstrual health education. Both these works contributed recommendations for designing culturally-responsive technologies for sensitive health topics.</p>
             <div class="project-links">
               <a href="pdfs/chi2020_menstrualimmobilities.pdf">CHI 2020</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-image">
-            <img src="images/projects/mhe.jpg" alt="Menstrual Health Education" />
-          </div>
-          <div class="project-body">
-            <h4>Examining Platforms for Menstrual Health Education in India</h4>
-            <p>Menstruation is a conversational taboo in India, restricting the effective delivery of Menstrual Health Education. Menstrupedia, a digital platform designed for an Indian audience, aims to bridge this information gap via its website and comic. We use <b>qualitative research methods</b> and engage with a Feminist HCI lens to analyze Menstrupedia's affordances and shortcomings, and provide recommendations for designing culturally-responsive technology for educating about sensitive health topics such as menstruation.</p>
-            <div class="project-links">
               <a href="pdfs/cscw2018_menstrupedia.pdf">CSCW 2018</a>
             </div>
           </div>
