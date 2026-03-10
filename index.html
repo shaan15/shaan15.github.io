@@ -43,7 +43,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <style>
   .inner-right p, .inner-right li p, .inner-right .description p {
     line-height: 1.75;
+    margin-bottom: 6px;
   }
+
   a.connect-btn {
     display: inline-flex;
     align-items: center;
@@ -122,6 +124,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .header.header-fixed-top {
     background-color: #ffffff !important;
   }
+
+  /* ── Left-align all text and headings ── */
+  body, p, li, td, th, div {
+    text-align: left !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-align: left !important;
+  }
+  /* override any inline center on page headings */
+  h1 center, h5 center { display: inline; }
+
+  /* ── Nav left layout ── */
+  header.header {
+    position: static !important;
+    background: #fff;
+    border-bottom: 1px solid #ececec;
+    padding: 0;
+  }
+  #nav-wrap {
+    padding: 12px 0 10px !important;
+    text-align: left !important;
+    max-width: 1170px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  #nav-wrap ul#nav {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: flex-start !important;
+    gap: 4px;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  /* ── Spacing between nav and page content ── */
+  .main-wrapper, main.main-wrapper {
+    margin-top: 28px !important;
+    padding-bottom: 60px !important;
+  }
 </style>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -160,9 +202,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
          <ul id="nav" class="nav">
             <li><a class="smoothscroll" href="index.html">About</a></li>
+           <li><a class="smoothscroll" href="projects.html">Research</a></li>
            <li><a class="smoothscroll" href="publications.html">Publications</a></li>
            <li><a class="smoothscroll" href="pdfs/cv.pdf">CV</a></li>
-           <li><a class="smoothscroll" href="projects.html">Research</a></li>
          </ul> <!-- end #nav -->
 
       </nav>
@@ -261,19 +303,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <section class="inner-right" style="padding-left:40px; padding-top: 0;">
 
 
-        <!-- <h1>About</h1> -->
-        <h1 style="font-size:50px">Shaan Chopra</h1>
+        <h1 style="font-size:50px; margin-bottom: 16px;">Shaan Chopra</h1>
 
         <!-- <h5 style="color:#B26CCC"><center> Human Computer Interaction | Health Informatics | Design Research | Participatory Design | Inclusive Design </center></h5> -->
 
-              <p style="font-size:14px; text-align: justify">I'm a PhD candidate in <a style="color:#B26CCC" href="https://www.cs.washington.edu/">Computer Science & Engineering</a> at the <a style="color:#B26CCC" href="https://www.uw.edu/">University of Washington</a>, advised by <a style="color:#B26CCC" href="https://homes.cs.washington.edu/~jfogarty/">James Fogarty</a> and <a style="color:#B26CCC" href="https://www.smunson.com/">Sean Munson</a> and with a research focus on <b>Human-Computer Interaction (HCI)</b> and <b>Health</b>. I use <b>human-centered</b> and <b>participatory approaches</b> to create <b>inclusive and clinically-integrated digital and AI-enabled health technologies</b> for supporting people better track, understand, self-experiment, and act on personal health data across varied goals and contexts. </p>
+              <p style="font-size:14px; text-align: justify">I'm a PhD candidate in <a style="color:#B26CCC" href="https://www.cs.washington.edu/">Computer Science & Engineering</a> at the <a style="color:#B26CCC" href="https://www.uw.edu/">University of Washington</a>, advised by <a style="color:#B26CCC" href="https://homes.cs.washington.edu/~jfogarty/">James Fogarty</a> and <a style="color:#B26CCC" href="https://www.smunson.com/">Sean Munson</a> and with a research focus on <b style="white-space:nowrap">Human-Computer Interaction (HCI)</b> and <b style="white-space:nowrap">Health</b>. I use <b style="white-space:nowrap">human-centered</b> and <b style="white-space:nowrap">participatory approaches</b> to create <b>inclusive and clinically-integrated digital and AI-enabled health technologies</b> for supporting people better track, understand, self-experiment, and act on personal health data across varied goals and contexts. </p>
 
 
         <!-- <p style="font-size:14px; text-align: justify">I'm a PhD candidate in <a style="color:#B26CCC" href="https://www.cs.washington.edu/">Computer Science & Engineering</a> at the <a style="color:#B26CCC" href="https://www.uw.edu/">University of Washington</a>, advised by <a style="color:#B26CCC" href="https://homes.cs.washington.edu/~jfogarty/">James Fogarty</a> and <a style="color:#B26CCC" href="https://www.smunson.com/">Sean Munson</a>. I conduct research at the intersection <b>Human-Computer Interaction (HCI)</b> and <b>Health</b> to create inclusive technologies that help people better understand, experiment, and make decisions based on personal health data.</p> -->
             
-            <p style="font-size:14px; text-align: justify"> I have over 9 years of experience in conducting (i) <b>formative studies</b> to identify needs and opportunities, (ii) <b>iterative design and development</b> of prototypes, tools, interfaces, and other presentation formats to support those needs, and (iii) <b>evaluations</b> to examine usage of and inform digital and AI-enabled health tools. I have conducted <b> interviews</b>, <b> co-design sessions</b>, and <b>focus groups</b> with over 270 people, developed <b>interactive visualizations</b>, <b>technology probes</b>, and <b>web&nbsp;tools & interfaces</b> to support personalized health and clinical care, and conducted <b>qualitative & quantitative analyses</b> of survey, interview, app usage, and health record data.</p>
+            <p style="font-size:14px; text-align: justify"> I have over 9 years of experience in conducting (i) <b style="white-space:nowrap">formative studies</b> to identify needs and opportunities, (ii) <b style="white-space:nowrap">iterative design and development</b> of prototypes, tools, interfaces, and other presentation formats to support those needs, and (iii) <b style="white-space:nowrap">evaluations</b> to examine usage of and inform digital and AI-enabled health tools. I have conducted <b style="white-space:nowrap"> interviews</b>, <b style="white-space:nowrap"> co-design sessions</b>, and <b style="white-space:nowrap">focus groups</b> with over 270 people, developed <b style="white-space:nowrap">interactive visualizations</b>, <b style="white-space:nowrap">technology probes</b>, and <b style="white-space:nowrap">web&nbsp;tools & interfaces</b> to support personalized health and clinical care, and conducted <b style="white-space:nowrap">qualitative & quantitative analyses</b> of survey, interview, app usage, and health record data.</p>
 
-                  <p style="font-size:14px; text-align: justify"> I collaborate with clinicians, health systems (<a style="color:#B26CCC" href="https://www.uwmedicine.org/">UW Medicine</a>, <a style="color:#B26CCC" href="https://www.seattlechildrens.org/research/research-institute/">Seattle Children’s Research Institute</a>, <a style="color:#B26CCC" href="https://www.parkview.com/">Parkview Health</a>) and community partners to create health tools that are responsive to real-world constraints. I have interned at <a style="color:#B26CCC" href="https://www.merck.com/">Merck Sharp & Dohme</a>, <a style="color:#B26CCC" href="https://www.parkview.com/mirro-center">Parkview Research</a>, and <a style="color:#B26CCC" href="https://www.iths.org/">ITHS</a>. My research has also led to <b>direct and lasting impact in clinical practice</b>.</p>
+                  <p style="font-size:14px; text-align: justify"> I collaborate with clinicians, health systems (<a style="color:#B26CCC" href="https://www.uwmedicine.org/">UW Medicine</a>, <a style="color:#B26CCC" href="https://www.seattlechildrens.org/research/research-institute/">Seattle Children’s Research Institute</a>, <a style="color:#B26CCC" href="https://www.parkview.com/">Parkview Health</a>) and community partners to create health tools that are responsive to real-world constraints. I have interned at <a style="color:#B26CCC" href="https://www.merck.com/">Merck Sharp & Dohme</a>, <a style="color:#B26CCC" href="https://www.parkview.com/mirro-center">Parkview Research</a>, and <a style="color:#B26CCC" href="https://www.iths.org/">ITHS</a>. My research has also led to <b style="white-space:nowrap">direct and lasting impact in clinical practice</b>.</p>
 
                   <!-- <p style="font-size:14px; text-align: justify"> I have worked in clinical and community health settings - examining how people and clinicians engage with health data and technological outputs across a range of contexts (e.g., gendered health-<a style="color:#B26CCC" href="https://doi.org/10.1145/3686975">menopause</a>, <a style="color:#B26CCC" href="https://dl.acm.org/doi/10.1145/3411764.3445706">polycystic ovary syndrome</a>; chronic health<a style="color:#B26CCC" href="https://doi.org/10.1145/3613904.3642827">-long COVID</a>, <a style="color:#B26CCC" href="https://doi.org/10.1145/3613904.3642075">migraine</a>, <a style="color:#B26CCC" href="https://doi.org/10.2196/59817">pediatric asthma</a>; AI for <a style="color:#B26CCC" href="https://dl.acm.org/doi/10.1145/3749503">personal health informatics</a>). I have collaborated within health systems (<a style="color:#B26CCC" href="https://www.uwmedicine.org/">UW Medicine</a>, <a style="color:#B26CCC" href="https://www.seattlechildrens.org/research/research-institute/">Seattle Children’s Research Institute</a>, <a style="color:#B26CCC" href="https://www.parkview.com/">Parkview Health</a>) and interned at <a style="color:#B26CCC" href="https://www.merck.com/">Merck Sharp & Dohme</a>, <a style="color:#B26CCC" href="https://www.parkview.com/mirro-center">Parkview Research</a>, and <a style="color:#B26CCC" href="https://www.iths.org/">ITHS</a>. My research has also led to <b>direct and lasting impact in clinical practice</b>.</p> -->
 
@@ -348,32 +389,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </section>   -->
 
 
-  <!-- <div class=""> -->
+      <div class="row" style="margin-left:0; margin-right:0;">
 
-      
-      <div class="col-md-5">
+      <div class="col-md-5" style="padding-left:0;">
         <h3>Interests</h3>
-        <ul class="ul-interests" style="color:#000000">
-          
-        <li>Human Computer Interaction</li>
-        <li>Health / Health Informatics</li>
-    <li>Human-Centered AI for Health</li>
-        <li>AI & Personal Informatics</li>
-        <!-- <li>Health Equity</li> -->
-        <li>Data Use in Clinical Setting</li>
-    <!-- <li>Generative AI for Health</li> -->
-    <li>Design Research</li>
-    <!-- <li>Participatory Design</li> -->
-    <li>Inclusive Design</li>
-    <li>User Experience</li>
-    <!-- <li>Community-Based Research</li> -->
-          
+        <ul class="ul-interests" style="color:#000000; list-style: none; padding-left: 0;">
+          <li>Human Computer Interaction</li>
+          <li>Health / Health Informatics</li>
+          <li>Human-Centered AI for Health</li>
+          <li>AI &amp; Personal Informatics</li>
+          <li>Data Use in Clinical Setting</li>
+          <li>Design Research</li>
+          <li>Inclusive Design</li>
+          <li>User Experience</li>
         </ul>
       </div>
-      
 
-      
-      <div class="col-md-7">
+      <div class="col-md-7" style="padding-left:0;">
         <h3>Education</h3>
         <!-- <ul class="ul-edu fa-ul" style="color:#000000"> -->
           
@@ -405,10 +437,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
         <!-- </ul> -->
       </div>
-      
 
-    <!-- </div> -->
-​                   
+      </div><!-- /row interests+education -->
 
       </section>
 
@@ -1216,63 +1246,7 @@ environments. I identified avenues for designing technology to support people’
 
 </main>
 
-<!-- Image Gallery --> 
-
-<!-- footer -->
-
-<!-- <footer>
-
-      <div class="row">
-
-         <div class="twelve columns">
-            <ul class="copyright">
-               <li>&copy; Copyright 2014 CeeVee</li>
-               <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a></li>
-            </ul>
-
-         </div>
-
-         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
-
-      </div>
-
-   </footer>  -->
-
-<footer style="background-color:#222222; z-index:1; width:100%; padding-top:10px; padding-bottom:10px; bottom:0; left:0; right:0; text-align:center; color:#999999; font-size:10px; letter-spacing:1px; font-weight:400">
-  <!-- <h3 style ="color:#999999"><center>Stay connected</center></h3> -->
-  <div style="padding-top:px">
-    <div class="row" style="padding-top:20px"> 
-      
-      <!-- email -->
-      
-      <!-- <div>
-        <p style="padding-top:10px; text-align:center"><a style ="color:#999999" href="mailto:schopra7@cs.washington.edu">schopra7@cs.washington.edu</a></p>
-      </div> -->
-      
-      <!-- email --> 
-      
-      <!-- social -->
-      
-      <!-- <div class="" style="alignment-baseline:center">
-        <ul class="social" style="text-align:center">
-          <li><a style ="color:#999999" href="https://www.linkedin.com/in/shaan-chopra/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-          <li><a style ="color:#999999" href="https://twitter.com/Shaan_Chopra97"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-         <li><a style ="color:#999999" href="https://schopra7.medium.com/"><i class="fa fa-medium" aria-hidden="true"></i></a></li>
-         <li><a style ="color:#999999" href="https://www.behance.net/choprashaa7c47"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-          <li><a style ="color:#999999" href="https://github.com/shaan15"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-
-        </ul>
-        <p class="made-by">Made with <i class="fa fa-heart" aria-hidden="true"></i> <a style ="color:#999999" href="" target="_blank">by Shaan</a>
-        </p>
-      </div> -->
-      
-      <!-- social --> 
-      
-    </div>
-  </div>
-</footer>
-
-<!-- footer --> 
+<!-- Image Gallery -->  
 
 <!-- jQuery --> 
 
