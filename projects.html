@@ -249,91 +249,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .header.header-fixed-top {
     background-color: #ffffff !important;
   }
-
-  /* ── Mobile hamburger nav ── */
-  .mobile-btn { display: none; }
-
-  #hamburger-toggle {
-    display: none;
-  }
-
-  .hamburger-label {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    width: 36px;
-    height: 36px;
-    padding: 6px;
-    border-radius: 8px;
-    background: #f3edf8;
-    border: 1px solid #d9b8ec;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10000;
-  }
-
-  .hamburger-label span {
-    display: block;
-    height: 2px;
-    background: #B26CCC;
-    border-radius: 2px;
-    transition: all 0.3s;
-    width: 100%;
-  }
-
-  #hamburger-toggle:checked + .hamburger-label span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
-  #hamburger-toggle:checked + .hamburger-label span:nth-child(2) {
-    opacity: 0;
-  }
-  #hamburger-toggle:checked + .hamburger-label span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-  }
-
-  @media (max-width: 768px) {
-    .hamburger-label {
-      display: flex;
-    }
-
-    #nav-wrap {
-      position: relative !important;
-    }
-
-    #nav-wrap ul#nav {
-      display: none !important;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      background: #fff;
-      border: 1px solid #e8d8f5;
-      border-radius: 12px;
-      padding: 10px;
-      min-width: 180px;
-      box-shadow: 0 4px 16px rgba(178,108,204,0.12);
-      z-index: 9999;
-    }
-
-    #hamburger-toggle:checked ~ ul#nav {
-      display: flex !important;
-    }
-
-    #nav-wrap ul#nav li {
-      width: 100%;
-    }
-
-    #nav-wrap ul#nav li a {
-      display: block !important;
-      width: 100% !important;
-      text-align: left !important;
-      border-radius: 8px !important;
-    }
-  }
 </style>
 
 <!--[if lt IE 9]>
@@ -359,10 +274,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
       <!-- <h1> <a title="Shaan Chopra"><img src="images/logo.png" alt="S" title="S"/></a> </h1> -->
       <nav id="nav-wrap">
-        <input type="checkbox" id="hamburger-toggle">
-        <label class="hamburger-label" for="hamburger-toggle">
-          <span></span><span></span><span></span>
-        </label>
+
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+        <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
 
          <ul id="nav" class="nav">
             <li><a class="smoothscroll" href="index.html">About</a></li>
@@ -500,6 +414,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p>Polycystic Ovary Syndrome (PCOS) is a condition that causes hormonal imbalance and infertility in women and people with female reproductive organs. PCOS causes different symptoms for different people, with no singular or universal cure. Being a stigmatized and enigmatic condition, it is challenging to discover, diagnose, and manage PCOS. Our work aims to inform the design of inclusive health technologies through an understanding of people's lived experiences and challenges with PCOS. We conducted <b>interviews</b> with people diagnosed with PCOS and <b>qualitatively analyzed</b> a PCOS-specific subreddit forum. We reported people's support-seeking, sense-making, and self-experimentation practices, and found uncertainty and stigma to be key in shaping their experiences. We identified avenues for designing technology to support diverse needs such as personalized and contextual tracking, accelerated self-discovery, and co-management.</p>
             <div class="project-links">
               <a href="pdfs/chi2021_pcos.pdf">CHI 2021</a>
+              <a href="https://medium.com/hcil-at-umd/living-with-uncertainty-and-stigma-b022881103f4">Medium</a>
             </div>
           </div>
         </div>
@@ -534,6 +449,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p>User-centered design is typically framed around meeting the preferences and needs of populations involved in the design process. However, when designing technology for people with disabilities — in particular dementia — there is also a moral imperative to ensure their human rights are consciously integrated into the process and included in the product. Our work introduced a human rights-based user-centered design process informed by the United Nations Convention on the Rights of Persons with Disabilities (CRPD). We conducted design workshops with undergraduate students and dementia advocates to design technology for people with dementia, actively involving people with dementia throughout the design process.</p>
             <div class="project-links">
               <a href="pdfs/chi2021_dementia.pdf">CHI 2021 Case Study</a>
+              <a href="https://medium.com/hcil-at-umd/recognizing-humanity-bb0be14d815">Medium</a>
             </div>
           </div>
         </div>
