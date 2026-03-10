@@ -62,6 +62,126 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .pub-wrapper p, .pub-wrapper li p {
     font-size: 14px;
+    line-height: 1.75;
+  }
+
+
+  #nav-wrap ul#nav li a {
+    background-color: transparent !important;
+    color: #555 !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    padding: 8px 16px !important;
+    border-radius: 20px !important;
+    border: 1px solid transparent !important;
+    transition: background 0.2s, color 0.2s, border-color 0.2s !important;
+    text-decoration: none !important;
+  }
+  #nav-wrap ul#nav li a:hover,
+  #nav-wrap ul#nav li a:focus {
+    background-color: #f3edf8 !important;
+    color: #B26CCC !important;
+    border-color: #d9b8ec !important;
+  }
+  #nav-wrap ul#nav li a:visited {
+    color: #555 !important;
+  }
+  #nav-wrap ul#nav li.current a,
+  #nav-wrap ul#nav li a.active {
+    background-color: #B26CCC !important;
+    color: #fff !important;
+    border-color: #B26CCC !important;
+  }
+  /* White background when header becomes fixed on scroll */
+  .header.header-fixed-top {
+    background-color: #ffffff !important;
+  }
+
+  /* ── Mobile hamburger nav ── */
+  .mobile-btn { display: none; }
+
+  #hamburger-toggle {
+    display: none;
+  }
+
+  .hamburger-label {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    padding: 6px;
+    border-radius: 8px;
+    background: #f3edf8;
+    border: 1px solid #d9b8ec;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+  }
+
+  .hamburger-label span {
+    display: block;
+    height: 2px;
+    background: #B26CCC;
+    border-radius: 2px;
+    transition: all 0.3s;
+    width: 100%;
+  }
+
+  #hamburger-toggle:checked + .hamburger-label span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  #hamburger-toggle:checked + .hamburger-label span:nth-child(2) {
+    opacity: 0;
+  }
+  #hamburger-toggle:checked + .hamburger-label span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  @media (max-width: 768px) {
+    .hamburger-label {
+      display: flex;
+    }
+
+    #nav-wrap {
+      position: relative !important;
+    }
+
+    #nav-wrap ul#nav {
+      display: none !important;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #e8d8f5;
+      border-radius: 12px;
+      padding: 10px;
+      min-width: 180px;
+      box-shadow: 0 4px 16px rgba(178,108,204,0.12);
+      z-index: 9999;
+    }
+
+    #hamburger-toggle:checked ~ ul#nav {
+      display: flex !important;
+    }
+
+    #nav-wrap ul#nav li {
+      width: 100%;
+    }
+
+    #nav-wrap ul#nav li a {
+      display: block !important;
+      width: 100% !important;
+      text-align: left !important;
+      border-radius: 8px !important;
+    }
   }
 </style>
 </head>
@@ -83,18 +203,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
       <!-- <h1> <a title="Shaan Chopra"><img src="images/logo.png" alt="S" title="S"/></a> </h1> -->
       <nav id="nav-wrap">
-
-         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-        <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+        <input type="checkbox" id="hamburger-toggle">
+        <label class="hamburger-label" for="hamburger-toggle">
+          <span></span><span></span><span></span>
+        </label>
 
          <ul id="nav" class="nav">
-            <li><a class="smoothscroll" href="index.html" style="background-color: #EBEBEB">About</a></li>
-            <!-- <li><a class="smoothscroll" href="#projects" style="background-color: #EBEBEB">Projects</a></li> -->
-           <li><a class="smoothscroll" href="publications.html" style="background-color: #EBEBEB">Publications</a></li>
-           <li><a class="smoothscroll" href="pdfs/cv.pdf" style="background-color: #EBEBEB">CV</a></li>
-           <li><a class="smoothscroll" href="projects.html" style="background-color: #EBEBEB">Selected Research</a></li>
-           <!-- <li><a class="smoothscroll" href="#artwork" style="background-color: #EBEBEB">Artwork</a></li> -->
-           
+            <li><a class="smoothscroll" href="index.html">About</a></li>
+           <li><a class="smoothscroll" href="publications.html">Publications</a></li>
+           <li><a class="smoothscroll" href="pdfs/cv.pdf">CV</a></li>
+           <li><a class="smoothscroll" href="projects.html">Research</a></li>
          </ul> <!-- end #nav -->
 
       </nav>
