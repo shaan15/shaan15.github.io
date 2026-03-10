@@ -40,6 +40,175 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <link href="css/responsive.css" rel="stylesheet" type="text/css">
 
+<style>
+  .inner-right p, .inner-right li p, .inner-right .description p {
+    line-height: 1.75;
+  }
+  a.connect-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #f3edf8;
+    color: #B26CCC !important;
+    border: 1px solid #d9b8ec;
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none !important;
+  }
+  a.connect-btn:visited {
+    background: #f3edf8;
+    color: #B26CCC !important;
+  }
+  a.connect-btn:active {
+    background: #B26CCC;
+    color: #fff !important;
+    border-color: #B26CCC;
+  }
+  a.connect-btn-cv {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #f3edf8;
+    color: #B26CCC !important;
+    border: 1px solid #d9b8ec;
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none !important;
+  }
+  a.connect-btn-cv:visited {
+    background: #f3edf8;
+    color: #B26CCC !important;
+    border-color: #d9b8ec;
+  }
+  a.connect-btn-cv:active {
+    background: #B26CCC;
+    color: #fff !important;
+  }
+
+
+  #nav-wrap ul#nav li a {
+    background-color: transparent !important;
+    color: #555 !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    padding: 8px 16px !important;
+    border-radius: 20px !important;
+    border: 1px solid transparent !important;
+    transition: background 0.2s, color 0.2s, border-color 0.2s !important;
+    text-decoration: none !important;
+  }
+  #nav-wrap ul#nav li a:hover,
+  #nav-wrap ul#nav li a:focus {
+    background-color: #f3edf8 !important;
+    color: #B26CCC !important;
+    border-color: #d9b8ec !important;
+  }
+  #nav-wrap ul#nav li a:visited {
+    color: #555 !important;
+  }
+  #nav-wrap ul#nav li.current a,
+  #nav-wrap ul#nav li a.active {
+    background-color: #B26CCC !important;
+    color: #fff !important;
+    border-color: #B26CCC !important;
+  }
+  /* White background when header becomes fixed on scroll */
+  .header.header-fixed-top {
+    background-color: #ffffff !important;
+  }
+
+  /* ── Mobile hamburger nav ── */
+  .mobile-btn { display: none; }
+
+  #hamburger-toggle {
+    display: none;
+  }
+
+  .hamburger-label {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    padding: 6px;
+    border-radius: 8px;
+    background: #f3edf8;
+    border: 1px solid #d9b8ec;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+  }
+
+  .hamburger-label span {
+    display: block;
+    height: 2px;
+    background: #B26CCC;
+    border-radius: 2px;
+    transition: all 0.3s;
+    width: 100%;
+  }
+
+  #hamburger-toggle:checked + .hamburger-label span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  #hamburger-toggle:checked + .hamburger-label span:nth-child(2) {
+    opacity: 0;
+  }
+  #hamburger-toggle:checked + .hamburger-label span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  @media (max-width: 768px) {
+    .hamburger-label {
+      display: flex;
+    }
+
+    #nav-wrap {
+      position: relative !important;
+    }
+
+    #nav-wrap ul#nav {
+      display: none !important;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid #e8d8f5;
+      border-radius: 12px;
+      padding: 10px;
+      min-width: 180px;
+      box-shadow: 0 4px 16px rgba(178,108,204,0.12);
+      z-index: 9999;
+    }
+
+    #hamburger-toggle:checked ~ ul#nav {
+      display: flex !important;
+    }
+
+    #nav-wrap ul#nav li {
+      width: 100%;
+    }
+
+    #nav-wrap ul#nav li a {
+      display: block !important;
+      width: 100% !important;
+      text-align: left !important;
+      border-radius: 8px !important;
+    }
+  }
+</style>
+
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 
 <!--[if lt IE 9]>
@@ -70,18 +239,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
       <!-- <h1> <a title="Shaan Chopra"><img src="images/logo.png" alt="S" title="S"/></a> </h1> -->
       <nav id="nav-wrap">
-
-         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-        <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+        <input type="checkbox" id="hamburger-toggle">
+        <label class="hamburger-label" for="hamburger-toggle">
+          <span></span><span></span><span></span>
+        </label>
 
          <ul id="nav" class="nav">
-            <li><a class="smoothscroll" href="index.html" style="background-color: #EBEBEB">About</a></li>
-            <!-- <li><a class="smoothscroll" href="#projects" style="background-color: #EBEBEB">Projects</a></li> -->
-           <li><a class="smoothscroll" href="publications.html" style="background-color: #EBEBEB">Publications</a></li>
-           <li><a class="smoothscroll" href="pdfs/cv.pdf" style="background-color: #EBEBEB">CV</a></li>
-           <li><a class="smoothscroll" href="projects.html" style="background-color: #EBEBEB">Selected Research</a></li>
-           <!-- <li><a class="smoothscroll" href="#artwork" style="background-color: #EBEBEB">Artwork</a></li> -->
-      
+            <li><a class="smoothscroll" href="index.html">About</a></li>
+           <li><a class="smoothscroll" href="publications.html">Publications</a></li>
+           <li><a class="smoothscroll" href="pdfs/cv.pdf">CV</a></li>
+           <li><a class="smoothscroll" href="projects.html">Research</a></li>
          </ul> <!-- end #nav -->
 
       </nav>
@@ -107,18 +274,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <section class="inner-left">
 
-        <!-- header>
-          <br>
+        <figure class="details-image" style="margin-top: 52px;">
 
-        </header> -->
-
-        <br>
-
-        <figure class="details-image">
-
-            <!-- <h1>Shaan Chopra</h1> -->
-
-            <center><img src="images/about.jpg" alt="" class="img-responsive" style="max-width: 90%" "max-height: 90%"/></center>
+            <center><img src="images/about.jpg" alt="" class="img-responsive" style="max-width: 90%; height: 320px; object-fit: cover; object-position: top; border-radius: 4px;"/></center>
             <br>
             
             <!-- <p style="font-size:16px; text-align: justify"">Upcoming:  for at <a style="color:#B26CCC" href="https://www.merck.com/">Merck</a> this summer!</p> -->
@@ -126,11 +284,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- <br> -->
             <!-- <p style="font-size:18px">I just finished a  interning at <a style="color:#B26CCC" href="https://www.parkview.com/mirro-center/mirro-center-home">Parkview Research Center</a>  in Summer 2022.</p> -->
 
-            <p>Connect via: <a style="color:#B26CCC" href="https://www.linkedin.com/in/shaan-chopra/">LinkedIn</a> | <a style="color:#B26CCC" href="/cdn-cgi/l/email-protection#ea998982859a988bddaa8999c49d8b998283848d9e8584c48f8e9f">Email</a> <br>Follow on: <a style="color:#B26CCC" href="https://twitter.com/Shaan_Chopra97">Twitter</a> | <a style="color:#B26CCC" href="https://schopra7.medium.com/">Medium</a> | <a style="color:#B26CCC" href="https://scholar.google.co.in/citations?user=bTblqSAAAAAJ&hl=en">Google Scholar</a> | <a style="color:#B26CCC" href="https://www.behance.net/choprashaa7c47">Behance</a> | <a style="color:#B26CCC" href="https://github.com/shaan15">GitHub</a><br>View: <a style="color:#B26CCC" href="pdfs/cv.pdf">Curriculum Vitae</a></p>
-
-            
+            <!-- Connect Links -->
+            <div style="margin-top:4px; margin-bottom:0;">
+              <div style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-bottom:0;">
+                <a href="#" class="connect-btn" id="email-btn" onclick="(function(e){e.preventDefault();navigator.clipboard.writeText('schopra7@cs.washington.edu').then(function(){var btn=document.getElementById('email-btn');var orig=btn.innerHTML;btn.innerHTML='<i class=\'fa fa-check\'></i> Copied!';setTimeout(function(){btn.innerHTML=orig;},2000);});})(event)"><i class="fa fa-envelope"></i> Email</a>
+                <a href="https://www.linkedin.com/in/shaan-chopra/" class="connect-btn"><i class="fa fa-linkedin"></i> LinkedIn</a>
+                <a href="https://twitter.com/Shaan_Chopra97" class="connect-btn"><i class="fa fa-times"></i> X</a>
+                <a href="https://scholar.google.co.in/citations?user=bTblqSAAAAAJ&hl=en" class="connect-btn"><i class="fa fa-graduation-cap"></i> Scholar</a>
+                <a href="pdfs/cv.pdf" class="connect-btn-cv"><i class="fa fa-file-text"></i> Curriculum Vitae</a>
+              </div>
+            </div>
 
         </figure>
+
+        <!-- News Section -->
+        <div style="margin-top:20px;">
+          <h4 style="font-size:15px; font-weight:700; color:#222; border-bottom:2px solid #B26CCC; padding-bottom:5px; margin-bottom:14px;">News ✨</h4>
+          <ul style="list-style:none; padding:0; margin:0; font-size:12.5px; color:#444; line-height:1.75;">
+            <li style="margin-bottom:8px; padding-bottom:8px; border-bottom:1px solid #f0e6f7;"><span style="color:#B26CCC; font-weight:700;">Nov 2025:</span> Became a Ph.D. Candidate!</li>
+            <li style="margin-bottom:8px; padding-bottom:8px; border-bottom:1px solid #f0e6f7;"><span style="color:#B26CCC; font-weight:700;">Oct 2025:</span> Gave a <a href="https://www.confrontingdata.dk/toolbox/toolbox-series-7-talk-with-shaan-chopra" style="color:#B26CCC;">research talk</a> at Co-lab, University of Copenhagen</li>
+            <li style="margin-bottom:8px; padding-bottom:8px; border-bottom:1px solid #f0e6f7;"><span style="color:#B26CCC; font-weight:700;">Oct 2025:</span> Presented <a href="https://dl.acm.org/doi/10.1145/3749503" style="color:#B26CCC;">our paper</a> at UbiComp 2025 in Espoo, Finland</li>
+            <li style="margin-bottom:8px;"><span style="color:#B26CCC; font-weight:700;">Aug 2025:</span> Completed my research internship at <a href="https://www.merck.com/" style="color:#B26CCC;">Merck</a></li>
+          </ul>
+        </div>
 
        <!--  <h4 style="color:#0789A6;">News:</h4> -->
 
@@ -168,23 +344,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- right -->
 
-      <section class="inner-right" style="padding-left:40px">
+      <section class="inner-right" style="padding-left:40px; padding-top: 0;">
 
 
         <!-- <h1>About</h1> -->
         <h1 style="font-size:50px">Shaan Chopra</h1>
 
         <!-- <h5 style="color:#B26CCC"><center> Human Computer Interaction | Health Informatics | Design Research | Participatory Design | Inclusive Design </center></h5> -->
-        <br>
 
               <p style="font-size:14px; text-align: justify">I'm a PhD candidate in <a style="color:#B26CCC" href="https://www.cs.washington.edu/">Computer Science & Engineering</a> at the <a style="color:#B26CCC" href="https://www.uw.edu/">University of Washington</a>, advised by <a style="color:#B26CCC" href="https://homes.cs.washington.edu/~jfogarty/">James Fogarty</a> and <a style="color:#B26CCC" href="https://www.smunson.com/">Sean Munson</a> and with a research focus on <b>Human-Computer Interaction (HCI)</b> and <b>Health</b>. I use <b>human-centered</b> and <b>participatory approaches</b> to create <b>inclusive and clinically-integrated digital and AI-enabled health technologies</b> for supporting people better track, understand, self-experiment, and act on personal health data across varied goals and contexts. </p>
 
 
         <!-- <p style="font-size:14px; text-align: justify">I'm a PhD candidate in <a style="color:#B26CCC" href="https://www.cs.washington.edu/">Computer Science & Engineering</a> at the <a style="color:#B26CCC" href="https://www.uw.edu/">University of Washington</a>, advised by <a style="color:#B26CCC" href="https://homes.cs.washington.edu/~jfogarty/">James Fogarty</a> and <a style="color:#B26CCC" href="https://www.smunson.com/">Sean Munson</a>. I conduct research at the intersection <b>Human-Computer Interaction (HCI)</b> and <b>Health</b> to create inclusive technologies that help people better understand, experiment, and make decisions based on personal health data.</p> -->
             
-            <p style="font-size:14px; text-align: justify"> I have over 9 years of experience in conducting (i) <b>formative studies</b> to identify needs and opportunities, (ii) <b>iterative design and development</b> of prototypes, tools, interfaces, and other presentation formats to support those needs, and (iii) <b>evaluations</b> to examine usage of and inform digital and AI-enabled health tools. I have conducted <b> interviews</b>, <b> co-design sessions</b>, and <b>focus groups</b> with over 270 people, developed <b>interactive visualizations</b>, <b>technology probes</b>, and <b>web tools & interfaces</b> to support personalized health and clinical care, and conducted <b>qualitative & quantitative analyses</b> of survey, interview, app usage, and health record data.</p>
+            <p style="font-size:14px; text-align: justify"> I have over 9 years of experience in conducting (i) <b>formative studies</b> to identify needs and opportunities, (ii) <b>iterative design and development</b> of prototypes, tools, interfaces, and other presentation formats to support those needs, and (iii) <b>evaluations</b> to examine usage of and inform digital and AI-enabled health tools. I have conducted <b> interviews</b>, <b> co-design sessions</b>, and <b>focus groups</b> with over 270 people, developed <b>interactive visualizations</b>, <b>technology probes</b>, and <b>web&nbsp;tools & interfaces</b> to support personalized health and clinical care, and conducted <b>qualitative & quantitative analyses</b> of survey, interview, app usage, and health record data.</p>
 
-<p style="font-size:14px; text-align: justify"> I collaborate with clinicians, health systems (<a style="color:#B26CCC" href="https://www.uwmedicine.org/">UW Medicine</a>, <a style="color:#B26CCC" href="https://www.seattlechildrens.org/research/research-institute/">Seattle Children’s Research Institute</a>, <a style="color:#B26CCC" href="https://www.parkview.com/">Parkview Health</a>) and community partners to create health tools that are responsive to real-world constraints. I have interned at <a style="color:#B26CCC" href="https://www.merck.com/">Merck Sharp & Dohme</a>, <a style="color:#B26CCC" href="https://www.parkview.com/mirro-center">Parkview Research</a>, and <a style="color:#B26CCC" href="https://www.iths.org/">ITHS</a>. My research has also led to <b>direct and lasting impact in clinical practice</b>.</p>
+                  <p style="font-size:14px; text-align: justify"> I collaborate with clinicians, health systems (<a style="color:#B26CCC" href="https://www.uwmedicine.org/">UW Medicine</a>, <a style="color:#B26CCC" href="https://www.seattlechildrens.org/research/research-institute/">Seattle Children’s Research Institute</a>, <a style="color:#B26CCC" href="https://www.parkview.com/">Parkview Health</a>) and community partners to create health tools that are responsive to real-world constraints. I have interned at <a style="color:#B26CCC" href="https://www.merck.com/">Merck Sharp & Dohme</a>, <a style="color:#B26CCC" href="https://www.parkview.com/mirro-center">Parkview Research</a>, and <a style="color:#B26CCC" href="https://www.iths.org/">ITHS</a>. My research has also led to <b>direct and lasting impact in clinical practice</b>.</p>
+
+                  <!-- <p style="font-size:14px; text-align: justify"> I have worked in clinical and community health settings - examining how people and clinicians engage with health data and technological outputs across a range of contexts (e.g., gendered health-<a style="color:#B26CCC" href="https://doi.org/10.1145/3686975">menopause</a>, <a style="color:#B26CCC" href="https://dl.acm.org/doi/10.1145/3411764.3445706">polycystic ovary syndrome</a>; chronic health<a style="color:#B26CCC" href="https://doi.org/10.1145/3613904.3642827">-long COVID</a>, <a style="color:#B26CCC" href="https://doi.org/10.1145/3613904.3642075">migraine</a>, <a style="color:#B26CCC" href="https://doi.org/10.2196/59817">pediatric asthma</a>; AI for <a style="color:#B26CCC" href="https://dl.acm.org/doi/10.1145/3749503">personal health informatics</a>). I have collaborated within health systems (<a style="color:#B26CCC" href="https://www.uwmedicine.org/">UW Medicine</a>, <a style="color:#B26CCC" href="https://www.seattlechildrens.org/research/research-institute/">Seattle Children’s Research Institute</a>, <a style="color:#B26CCC" href="https://www.parkview.com/">Parkview Health</a>) and interned at <a style="color:#B26CCC" href="https://www.merck.com/">Merck Sharp & Dohme</a>, <a style="color:#B26CCC" href="https://www.parkview.com/mirro-center">Parkview Research</a>, and <a style="color:#B26CCC" href="https://www.iths.org/">ITHS</a>. My research has also led to <b>direct and lasting impact in clinical practice</b>.</p> -->
+
 
                       <!-- <p style="font-size:14px; text-align: justify">I have worked in both public and clinical health settings - examining stigmatized and marginalized health topics, incorporating clinical perspectives in design of clinical care platforms, and informing innovative ways for improving access and reducing disparities in healthcare.</p> -->
 
@@ -212,7 +390,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
            
             <!-- <p style="font-size:16px; text-align: justify">I have experience with <b>user research</b>, <b>design</b>, and <b>development</b> and, have been working in the field of Human-Computer Interaction and Health for the past 7 years. I particularly enjoy taking <b>user-centered</b> and <b>participatory approaches</b> to examine sensitive problems within healthcare contexts and self-experimentation. </p> -->
 
-            <p style="font-size:14px; text-align: justify">To know more, check out my <a style="color:#B26CCC" href="publications.html">publications</a> and <a style="color:#B26CCC" href="projects.html">selected projects</a>.</p>
+            <!-- <p style="font-size:14px; text-align: justify">To know more, check out my <a style="color:#B26CCC" href="publications.html">publications</a> and <a style="color:#B26CCC" href="projects.html">selected projects</a>.</p> -->
         <!-- I am passionate about creating culturally-responsive, inclusive, and accessible technologies for different populations (e.g., women, children, older adults, people with chronic health conditions, people with cognitive disabilities, low literacy & economically weak groups) and envision creating a more compassionate world that supports their diverse identity facets. </p> -->
             <!-- <p>I hold a bachelor's degree in Computer Science & Engineering from <a style="color:#B26CCC" href="https://www.iiitd.ac.in/">IIIT-Delhi</a> during which I explored different sides of computer science (e.g., social computing, machine learning, ICTs for development) and also spent a wonderful summer interning at <a style="color:#B26CCC" href="https://www.inria.fr/en/centre/paris">INRIA, Paris</a>. I was intrigued by the sociocultural dynamics of technology and wondered what made certain applications so widely usable. Pursuing a master's degree in HCI to learn more about user experience research and technology design felt like the natural next step. </p>
             <p> At UMD, I gaining practical skills in UX research, usability testing, and data visualization through coursework, research, and internships. I have published my research on health, personal informatics, and accessibility-related topics at top HCI venues. I spent the summer as a User Experience intern at <a style="color:#B26CCC" href="https://www.appruve.co/">Appruve</a> where I collaborated with their product and engineering teams to design the future of financial onboarding and verification products. I also remotely collaborated with the <a style="color:#B26CCC" href="http://loki.lille.inria.fr/">Loki Team</a> at INRIA, Lille, designing interactive widgets for touch-based interfaces that afford micro-interactions. Last but not the least, I worked as a research assistant at UMD, conducting cross-cultural studies using in-depth interviews, online diary studies, and remote usability testing. </p> -->
@@ -1197,5 +1375,3 @@ environments. I identified avenues for designing technology to support people’
 <script src="js/gallery/imagesloaded.pkgd.min.js" type="text/javascript"></script> 
 <script src="js/gallery/jquery.infinitescroll.min.js" type="text/javascript"></script> 
 <script src="js/gallery/main.js" type=
-
-
