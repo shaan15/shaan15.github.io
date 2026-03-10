@@ -54,9 +54,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <style>
   .pub-wrapper {
-    max-width: 960px;
+    max-width: 1170px;
     margin: 0 auto;
-    padding: 0 28px 40px;
+    padding: 0 15px 60px;
     font-size: 14px;
     color: #000000;
   }
@@ -98,6 +98,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .header.header-fixed-top {
     background-color: #ffffff !important;
   }
+
+  /* ── Left-align all text and headings ── */
+  body, p, li, td, th, div {
+    text-align: left !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-align: left !important;
+  }
+  /* Restore center on page-level h1 and scholar link */
+  .pub-wrapper > h1,
+  .pub-wrapper > h5 {
+    text-align: center !important;
+  }
+
+  /* ── Nav left layout ── */
+  header.header {
+    position: static !important;
+    background: #fff;
+    border-bottom: 1px solid #ececec;
+    padding: 0;
+  }
+  #nav-wrap {
+    padding: 12px 0 10px !important;
+    text-align: left !important;
+    max-width: 1170px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  #nav-wrap ul#nav {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: flex-start !important;
+    gap: 4px;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  /* ── Spacing between nav and page heading ── */
+  .main-wrapper, main.main-wrapper {
+    margin-top: 28px !important;
+  }
 </style>
 </head>
 
@@ -124,9 +166,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
          <ul id="nav" class="nav">
             <li><a class="smoothscroll" href="index.html">About</a></li>
+           <li><a class="smoothscroll" href="projects.html">Research</a></li>
            <li><a class="smoothscroll" href="publications.html">Publications</a></li>
            <li><a class="smoothscroll" href="pdfs/cv.pdf">CV</a></li>
-           <li><a class="smoothscroll" href="projects.html">Research</a></li>
          </ul> <!-- end #nav -->
 
       </nav>
@@ -149,8 +191,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section id="publications">
       <br>
     <div class="pub-wrapper">
-      <h1><center>Publications</center> </h1>
-      <h5><center><a style="color:#B26CCC" href="https://scholar.google.co.in/citations?user=bTblqSAAAAAJ&hl=en">Google Scholar Profile</a></center></h5>
+      <h1>Publications</h1>
+      <h5><a style="color:#B26CCC" href="https://scholar.google.co.in/citations?user=bTblqSAAAAAJ&hl=en">Google Scholar Profile</a></h5>
       <br>
       <h4>Conference & Journal Publications (Peer-Reviewed)</h4>
 
@@ -258,63 +300,7 @@ Human-Computer Interaction, 2021. <a style="color:#B26CCC" href="https://drum.li
 
 </main>
 
-<!-- Image Gallery --> 
-
-<!-- footer -->
-
-<!-- <footer>
-
-      <div class="row">
-
-         <div class="twelve columns">
-            <ul class="copyright">
-               <li>&copy; Copyright 2014 CeeVee</li>
-               <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a></li>
-            </ul>
-
-         </div>
-
-         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
-
-      </div>
-
-   </footer>  -->
-
-<footer style="background-color:#222222; z-index:1; width:100%; padding-top:10px; padding-bottom:10px; bottom:0; left:0; right:0; text-align:center; color:#999999; font-size:10px; letter-spacing:1px; font-weight:400">
-  <!-- <h3 style ="color:#999999"><center>Stay connected</center></h3> -->
-  <div style="padding-top:px">
-    <div class="row" style="padding-top:20px"> 
-      
-      <!-- email -->
-      
-      <!-- <div>
-        <p style="padding-top:10px; text-align:center"><a style ="color:#999999" href="mailto:schopra7@cs.washington.edu">schopra7@cs.washington.edu</a></p>
-      </div> -->
-      
-      <!-- email --> 
-      
-      <!-- social -->
-      
-      <!-- <div class="" style="alignment-baseline:center">
-        <ul class="social" style="text-align:center">
-          <li><a style ="color:#999999" href="https://www.linkedin.com/in/shaan-chopra/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-          <li><a style ="color:#999999" href="https://twitter.com/Shaan_Chopra97"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-         <li><a style ="color:#999999" href="https://schopra7.medium.com/"><i class="fa fa-medium" aria-hidden="true"></i></a></li>
-         <li><a style ="color:#999999" href="https://www.behance.net/choprashaa7c47"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-          <li><a style ="color:#999999" href="https://github.com/shaan15"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-
-        </ul>
-        <p class="made-by">Made with <i class="fa fa-heart" aria-hidden="true"></i> <a style ="color:#999999" href="" target="_blank">by Shaan</a>
-        </p>
-      </div> -->
-      
-      <!-- social --> 
-      
-    </div>
-  </div>
-</footer>
-
-<!-- footer --> 
+<!-- Image Gallery -->  
 
 <!-- jQuery --> 
 
