@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
   #nav-wrap ul#nav li a {
-    background-color: transparent !important;
+    background-color: #ffffff !important;
     color: #555 !important;
     font-size: 12px !important;
     font-weight: 600 !important;
@@ -114,8 +114,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   /* ── Nav left layout ── */
   header.header {
-    position: static !important;
-    background: #fff;
+    position: sticky !important;
+    top: 0;
+    z-index: 1000;
+    background: #fff !important;
     border-bottom: 1px solid #ececec;
     padding: 0;
   }
@@ -139,6 +141,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* ── Spacing between nav and page heading ── */
   .main-wrapper, main.main-wrapper {
     margin-top: 28px !important;
+    padding-bottom: 60px !important;
   }
 </style>
 </head>
